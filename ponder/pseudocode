@@ -1,0 +1,20 @@
+/*
+Pseudocode:
+
+1. Select the theme dropdown and the body of the page.
+2. Listen for the user to change the selected theme.
+3. When the theme changes, get the value they selected.
+4. If the user selects Ocean:
+   - Change the background to the ocean image.
+   - Change the font to Papyrus.
+5. If the user selects Forest:
+   - Change the background to the forest image.
+   - Change the font to Impact.
+6. If the user selects Desert:
+   - Change the background to the desert image.
+   - Change the font to Big Caslon.
+7. If no theme is selected:
+   - Remove the background image.
+   - Change the font back to Georgia.
+8. Allow the user to keep selecting different themes and repeat the process.
+*/
