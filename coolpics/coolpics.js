@@ -1,33 +1,55 @@
 
 const menuButton = document.querySelector('.menu-button');
-const nav = document.querySelector('nav');
+const navLinks = document.querySelector('.nav-links');
 
+// Toggle mobile navigation
 function toggleMenu() {
-    nav.classList.toggle('hide');
+    navLinks.classList.toggle('show');
+
+    const isOpen = navLinks.classList.contains('show');
+    menuButton.setAttribute('aria-expanded', isOpen);
 }
 
 menuButton.addEventListener('click', toggleMenu);
 
-// Image modal
+// Image modal elements
 const gallery = document.querySelector('.gallery');
-const modal = document.querySelector('dialog');
+const modal = document.querySelector('.image-viewer');
 const modalImage = modal.querySelector('img');
 const closeButton = modal.querySelector('.close-viewer');
 
-gallery.addEventListener('click', (event) => {
+// Open modal when an image is clicked
+function openModal(event) {
     if (event.target.tagName === 'IMG') {
-        modalImage.src = event.target.src.replace('-sm', '-full');
+        const src = event.target.src;
+
+        modalImage.src = src.replace('-sm', '-full');
         modalImage.alt = event.target.alt;
+
         modal.showModal();
     }
-});
+}
 
+gallery.addEventListener('click', openModal);
+
+// Close modal using X button
 closeButton.addEventListener('click', () => {
     modal.close();
 });
 
+// Close modal when clicking outside the image
 modal.addEventListener('click', (event) => {
     if (event.target === modal) {
-        modal.close();
+        const rect = modal.getBoundingClientRect();
+
+        const outside =
+            event.clientX < rect.left ||
+            event.clientX > rect.right ||
+            event.clientY < rect.top ||
+            event.clientY > rect.bottom;
+
+        if (outside) {
+            modal.close();
+        }
     }
 });
