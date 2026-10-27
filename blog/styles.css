@@ -65,6 +65,11 @@ main {
     padding-block: 2.5rem 2rem;
 }
 
+#articles {
+    display: grid;
+    gap: 3rem;
+}
+
 .book-review {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
