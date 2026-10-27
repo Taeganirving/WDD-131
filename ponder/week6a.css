@@ -1,0 +1,15 @@
+/* Keep the simple page presentation shown in the instructor's output image. */
+body {
+    margin: 8px;
+    background-color: white;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.25rem;
+}
+
+.student-name {
+    margin: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #999;
+    text-align: center;
+}
