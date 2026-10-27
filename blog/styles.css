@@ -1,0 +1,170 @@
+:root {
+    --heading-color: #382234;
+    --accent-color: #a80025;
+    --divider-color: #efc69b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    color: #111;
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+h1, h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.2;
+}
+
+h1 {
+    margin: 2rem 0;
+    color: var(--heading-color);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.main-nav {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: end;
+    gap: clamp(0.75rem, 5vw, 2rem);
+    margin: 0;
+    padding: 0.5rem 1.5rem;
+    border-block: 2px solid var(--divider-color);
+    list-style: none;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 0.5rem 0;
+}
+
+a[href]:hover {
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 4px;
+}
+
+main {
+    padding-block: 2.5rem 2rem;
+}
+
+.book-review {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.review-details {
+    padding: 0 2rem;
+    border-top: 2px solid var(--divider-color);
+    text-align: right;
+}
+
+.review-details p {
+    margin: 0.875rem 0;
+}
+
+.review-date {
+    font-style: italic;
+}
+
+.rating {
+    white-space: nowrap;
+}
+
+.review-content {
+    min-width: 0;
+    padding: 0 2rem;
+}
+
+.review-content h2 {
+    margin: 0.5rem 0 1rem;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+.book-cover {
+    display: block;
+    width: 160px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 1rem;
+}
+
+.review-content p {
+    margin: 0;
+}
+
+.site-footer {
+    border-top: 2px solid var(--divider-color);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 1rem 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    z-index: 1;
+    padding: 0.75rem;
+    background: #fff;
+    transform: translateY(-150%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (min-width: 700px) {
+    .book-review {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .review-details {
+        border-top: 0;
+        border-right: 2px solid var(--divider-color);
+    }
+
+    .review-content {
+        padding-right: 3rem;
+    }
+
+    .review-content h2 {
+        margin-top: 1rem;
+    }
+
+    .book-cover {
+        width: 218px;
+    }
+}
