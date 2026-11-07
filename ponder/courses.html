@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore JavaScript course sections and enroll a student using a JavaScript object method.">
+  <title>JavaScript Course Sections</title>
+  <link rel="stylesheet" href="courses.css">
+  <script src="courses.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1 id="courseName"></h1>
+    <h2 id="courseCode"></h2>
+    <form id="enrollmentForm" novalidate>
+      <label for="sectionNumber">Section Number</label>
+      <div class="enrollment-controls">
+        <input id="sectionNumber" name="sectionNumber" type="number" min="1" step="1" required aria-describedby="sectionHint">
+        <button id="enrollStudent" type="submit">Enroll Student</button>
+      </div>
+      <p id="sectionHint">Enter section 1 or 2 to add one student.</p>
+    </form>
+    <p id="status" role="status" aria-live="polite"></p>
+    <div class="table-container" role="region" aria-label="Course sections" tabindex="0">
+      <table>
+        <caption>Available course sections</caption>
+        <thead>
+          <tr>
+            <th scope="col">Section#</th>
+            <th scope="col">Room#</th>
+            <th scope="col">#Enrolled</th>
+            <th scope="col">Days</th>
+            <th scope="col">Instructor</th>
+          </tr>
+        </thead>
+        <tbody id="sections"></tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
