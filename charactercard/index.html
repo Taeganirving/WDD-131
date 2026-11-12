@@ -1,0 +1,48 @@
+<!-- Produced with AI assistance: OpenAI Codex, November 2026.
+IEEE-style citation: [1] OpenAI, “Codex,” Nov. 2026. [Online]. Available: https://openai.com/codex/
+portions created without AI assistance: to be confirmed by Taegan
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snortleblat | Character Card</title>
+  <meta name="description" content="Meet Snortleblat, the Swamp Beast Diplomat. Track his health and level with this interactive character card.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Snortleblat | Character Card">
+  <meta property="og:description" content="Meet the Swamp Beast Diplomat and try the interactive health and level controls.">
+  <meta property="og:url" content="https://taeganirving.github.io/WDD-131/charactercard/">
+  <meta property="og:image" content="https://andejuli.github.io/wdd131/character_card/snortleblat.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Snortleblat | Character Card">
+  <meta name="twitter:description" content="Meet the Swamp Beast Diplomat and try the interactive health and level controls.">
+  <meta name="twitter:image" content="https://andejuli.github.io/wdd131/character_card/snortleblat.webp">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+  <script src="character.js" defer></script>
+</head>
+<body>
+  <main id="card" class="card">
+    <h1 id="heading"></h1>
+    <section id="portrait-section" aria-label="Character portrait">
+      <img id="character-image" alt="" fetchpriority="high">
+    </section>
+    <h2 id="subtitle"></h2>
+    <p id="description"></p>
+    <section id="information" aria-label="Character information" aria-live="polite" aria-atomic="true">
+      <p id="name-row">Name: <span id="name"></span></p>
+      <p id="class-row">Class: <span id="class"></span></p>
+      <p id="level-row">Level: <span id="level"></span></p>
+      <p id="health-row">Health: <span id="health"></span></p>
+    </section>
+    <p id="status" role="status"></p>
+    <section id="actions" aria-label="Character actions">
+      <button id="attacked" type="button">Attacked</button>
+      <button id="level-up" type="button">Level Up</button>
+    </section>
+  </main>
+</body>
+</html>
